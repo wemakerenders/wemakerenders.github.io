@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name = "description" content ="INCLUDE DESCRIPTION"/>
+
+    <title>We Make Renders</title>
+
+    
+    <!-- JQuery -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Freewall plugin -->
+    <script type="text/javascript" src="freewall.js"></script>
+
+    <!-- Bootstrap -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+   <!-- FONT-AWESOME -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <link rel=stylesheet href="stylesheet.css"/>
+
+    <link href='http://fonts.googleapis.com/css?family=Martel:200,400,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700' rel='stylesheet' type='text/css'>
+
+
+  </head>
+
+  <body>
+   <div id=home-header>
+      <img id="banner" src="img1.jpg">
+
+      <div id="banner-text">
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <figure id="logo">
+              <img src="logo.jpg">
+            </figure>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      
+      <div id="resized-menu" class="row visible-xs visible-sm">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <nav id="xs-menu">
+              <ul>
+                <li><a href=#><span class="red">Home</span></a></li>
+                <li><a href=#>About</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-md-3"></div>
+      </div>
+
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 home-page" id="intro">
+              <p><strong><span class="red">WeMakeRenders</span></strong> tiene una filosofía clara, esforzarse por ofrecer la mejor atención al proyecto y al cliente.</p>
+              <p>Gracias al medio online ofrecemos un trato cercano y personalizado, trabajando con estudios en distintas localizaciones físicas, siempre con una comunicación fluida y óptima.</p>
+              <p>Un equipo en constante evolución y desarrollo con la misión de ofrecer siempre el mejor producto con la mejor actitud.</p>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+      </div>
+
+      <!--<div id="icon-menu" class="visible-xs visible-sm">
+              <div id="menu-button"><a href=# class="fa fa-bars"></a></div>
+              <div id="slide-down-menu">
+                <ul>
+                  <li><a href=#>Home</a></li>
+                  <li><a href=#>About</a></li>
+                </ul>
+              </div>
+      </div>-->
+       
+       <nav class="side-menu">
+          <div id="main-menu">
+            <ul>
+              <li><a href=#><span class="red">Home</span></a></li>
+              <li><a href=#>About</a></li>
+            </ul>
+          </div>
+      </nav>
+  </div>
+
+
+  <div id="free-wall">
+    <div class="item size22"><img src="img2.jpg"></div>
+    <div class="item"><img src="img3.jpg"></div>
+    <div class="item"><img src="img4.jpg"></div>
+    <div class="item"><img src="img8.jpg"></div>
+    <div class="item"><img src="img10.jpg"></div>
+    <div class="item"><img src="img7.jpg"></div>
+  </div>
+    <script type="text/javascript">
+
+    // Menu
+      var $menuButton = $('#menu-button'),
+          $slideMenu = $('#slide-down-menu');
+
+      $menuButton.click(function(){
+        $slideMenu.slideToggle();
+        return false;
+      });
+
+      // Freewall
+      $(function() {
+        var wall = new freewall("#free-wall");
+        wall.fitWidth();
+        wall.reset({
+          selector: '.item',
+          animate: false,
+          gutterX: 10,
+          gutterY: 10,
+          draggable: false,
+          cellW: '200px',
+          cellH: 'auto',
+          onResize: function() {
+            this.fitWidth();
+          }
+        });
+      })
+
+    </script>
+
+  </body>
+</html>

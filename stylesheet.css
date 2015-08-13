@@ -23,22 +23,13 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-skype:before {
-	content: "\e602";
-	margin-right: 0.3em;
-	font-size: 13px;
-}
 
-.icon-quotes-right:before {
-	content: "\e600";
-}
-.icon-quotes-left:before {
-	content: "\e601";
-}
 
-.sides-padding {
-	padding-left: 5em;
-	padding-right: 5em;
+body {
+	margin: 10px;
+	font-family: "Martel", serif;
+	font-weight: 200;
+	color: #4e4e56;
 }
 
 #bottom-menu {
@@ -59,10 +50,20 @@
 #bottom-menu #skype {
 	vertical-align: top;
 }
+#banner {
+	width:100%;
+}
+
+#banner-text {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 #home-header {
-
+	position: relative;
 }
+
 
 #intro {
 	font-size: 18px;
@@ -100,9 +101,12 @@
 	color: #8E2D2D;
 }
 
+#resized-menu {
+	margin: 2em 0 0 0;
+}
+
 #skype {
 	border-bottom: none;
-	font-size: 14px;
 }
 
 #testimonials p:first-child{
@@ -144,14 +148,23 @@
 
 .container {
 	background: #f3f3f3;
-	width: 98%;
-	height: 98%;
-	margin: 1%;
+	margin: 0;
 	font-size: 13px;
-	font-family: "Martel", serif;
-	font-weight: 200;
 	position: relative;
-	color: #4e4e56;
+	width: 100%;
+}
+
+.icon-skype:before {
+	content: "\e602";
+	margin-right: 0.3em;
+	font-size: 17px;
+}
+
+.icon-quotes-right:before {
+	content: "\e600";
+}
+.icon-quotes-left:before {
+	content: "\e601";
 }
 
 .side-menu {
@@ -176,16 +189,29 @@
 	margin: 3em 0;
 }
 
+.sides-padding {
+	padding-left: 5em;
+	padding-right: 5em;
+}
+
 .quotation {
 	margin-top: 2em;
 	font-style: italic;
 }
 
+@media screen and (max-width:1300px) {
+	#banner {
+		opacity: 0.4;
+	}
 
+}
 
 @media screen and (max-width:1200px) {
   .side-menu {
 		width: 17%;
+	}
+	#intro p {
+		margin: 15px;
 	}
 }
 
@@ -195,7 +221,120 @@
 	}
 }
 @media screen and (max-width:992px) {
-  .side-menu {
+  	.side-menu {
 		display: none;
 	}
+	.row {
+		margin: 2em 0;
+	}
 }
+
+@media screen and (max-width:700px) {
+	#intro {
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.row {
+		margin: 1em 0;
+	}
+
+}
+
+@media screen and (max-width:610px) {
+	.row .home-page p:nth-child(2) {
+		display: none;
+	}
+
+	.row .home-page p:nth-child(3) {
+		display: none;
+	}
+
+	#bottom-menu {
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width:455px) {
+	#intro.home-page p:nth-child(1) {
+		margin: 0;
+	}
+}
+
+
+/* CSS FOR FREEWALL */
+
+.item {
+    width: 400px;
+    height: 320px;
+    background: rgb(135, 199, 135);
+}
+
+.item img {
+	height: 100%;
+	width: 100%;
+}
+
+#free-wall {
+	width: 100%;
+	margin-top: 10px;
+}
+
+
+
+/* CSS FOR MENU ICON AND SLIDE-DOWN MENU
+#icon-menu {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+#icon-menu a {
+	text-decoration: none;
+	color: #4e4e56;
+}
+
+#icon-menu a:hover {
+	color: #8E2D2D;
+}
+
+
+
+#slide-down-menu {
+	display: none;
+}
+
+#slide-down-menu ul{
+	padding: 10px;
+	background: rgba(255, 255, 255, 0.5);
+}
+
+#slide-down-menu li{
+	list-style-type: none;
+	font-weight: 800;
+	padding: 3px 0;
+}
+
+#menu-button a {
+	font-size: 30px;
+}
+
+*/
+
+
+
+
+/* 
+to make banner image a background-image instead of a div
+#home-banner {
+	background-image: url('img3.jpg');
+	width: 100%;
+	height: 500px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	margin-top: 0;
+}*/
+
+
+
+
