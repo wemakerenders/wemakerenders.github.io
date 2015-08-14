@@ -233,7 +233,6 @@ body {
 @media screen and (max-width:700px) {
 	#intro {
 		font-size: 16px;
-		font-weight: 400;
 	}
 	.row {
 		margin: 1em 0;
