@@ -69,7 +69,7 @@ body {
 #intro {
 	font-size: 18px;
 	text-align: center;
-	margin-bottom: 5em;
+	margin-bottom: 1em;
 	font-weight: 400;
 }
 
@@ -119,7 +119,7 @@ body {
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 20px;
-	padding-left: 3em;
+	text-align: center;
 }
 
 #xs-menu {
@@ -253,16 +253,19 @@ body {
 	}
 }
 
+#testimonials-slider .carousel-inner {
+	padding-bottom: 40px;
+}
 
 /* CSS FOR FREEWALL */
 
-.item {
+#free-wall .item {
     width: 400px;
     height: 320px;
     background: rgb(135, 199, 135);
 }
 
-.item img {
+#free-wall .item img {
 	height: 100%;
 	width: 100%;
 }

@@ -12,6 +12,8 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
     <!-- FONT-AWESOME -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -59,11 +61,12 @@
       <div class="row">
           <div class="col-md-3"></div>
           <div id="testimonials-header" class="col-md-6">
-            <p>Lo que nuestros clientes dicen de nosotros:</p>
+            <p>Testimonials:</p>
           </div>
           <div class="col-md-3"></div>
       </div>
-      <div id="testimonials" class="row">
+
+      <!--<div id="testimonials" class="row">
           <div class="col-md-3"></div>
           <div class="col-md-6 sides-padding">
             <p class="quotation">"El trabajo de WeMakeRenders es de una calidad dificilmente superable y ejecutada en tiempos records. Su valor se centra en entender y ayudar a la mejor descripción de un proyecto."</p>
@@ -78,7 +81,9 @@
             <p><strong>Jaime Estevas, arquitecto</strong></p>
           </div>
           <div class="col-md-3"></div>
-      </div>
+      </div>-->
+
+      
       <nav class="side-menu">
         <div id="main-menu">
           <ul>
@@ -98,6 +103,50 @@
           <p><span class="icon-skype"></span>alfonso_fiz</p>
         </div>
       </nav>
+      
+
+      
+      <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <div id="testimonials-slider" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#testimonials-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#testimonials-slider" data-slide-to="1"></li>
+                <li data-target="#testimonials-slider" data-slide-to="2"></li>
+                <li data-target="#testimonials-slider" data-slide-to="3"></li>
+                <li data-target="#testimonials-slider" data-slide-to="4"></li>
+              </ol>
+
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <p class="quotation">"El trabajo de WeMakeRenders es de una calidad dificilmente superable y ejecutada en tiempos records. Su valor se centra en entender y ayudar a la mejor descripción de un proyecto."</p>
+                  <p><strong>Jose Aguilar, arquitecto</strong></p>
+                </div>
+                <div class="item">
+                  <p class="quotation">"WMR es pieza fundamental en nuestros proyectos más exclusivos . Ofrecen alta calidad de producto y responsabilidad en el trabajo, siempre aportando ideas creativas."</p>
+                  <p><strong>Valentin de Madariaga, arquitecto</strong></p>
+                </div>
+                <div class="item">
+                   <p class="quotation">"La colaboración con el estudio es un proceso interactivo de aportaciones que acaba en un resultado espectacular y siempre dentro de los reducidos plazos."</p>
+                  <p><strong>Jaime del Yerro, arquitecto</strong></p>
+                </div>
+                <div class="item">
+                  <p class="quotation">"WMR nos permite optimizar nuestros tiempos gracias a su capacidad de asimilar los proyectos."</p>
+                  <p><strong>Luis Goyenechea, arquitecto</strong></p>
+                </div>
+                <div class="item">
+                  <p class="quotation">"WeMakeRenders hace que lo que has diseñado en papel cobre vida, respire, se coloree… es como tocar el futuro."</p>
+                  <p><strong>Jaime Estevas, arquitecto</strong></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+      </div>
+
       <div class="row visible-xs visible-sm">
           <div class="col-md-4"></div>
           <div id="bottom-menu" class="col-md-4">
@@ -115,7 +164,6 @@
           </div>
           <div class="col-md-4"></div>
       </div>
-    </div>
-    
-  </body>
+
+</body>
 </html>
