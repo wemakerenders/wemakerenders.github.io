@@ -74,7 +74,8 @@ body {
 }
 
 #logo {
-	text-align: center;
+	max-width: 80%;
+	
 }
 
 #main-menu {
@@ -104,15 +105,16 @@ body {
 }
 
 #resized-menu {
-	margin: 2em 0 0 0;
+	margin: 1em 0 0 0;
 }
 
 #skype {
 	border-bottom: none;
 }
 
-#testimonials p:first-child{
-	margin-top: 0;
+#testimonials{
+	margin-top: 7em;
+	margin-bottom: 0;
 }
 #testimonials-header {
 	margin-bottom: 0;
