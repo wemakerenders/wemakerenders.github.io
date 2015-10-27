@@ -91,6 +91,37 @@
     <div class="item"><img src="img10.jpg"></div>
     <div class="item"><img src="img7.jpg"></div>
   </div>
+    
+    <script type="text/javascript">
+
+    var selectedImage = 0;
+
+      $("#banner").click(function(){
+        var image = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg"];
+
+        function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function getNextImage() {
+          do {
+            var nextImage = getRandomInt(0,3)
+          } while(selectedImage == nextImage)
+
+          selectedImage = nextImage;
+          return nextImage;
+        }
+
+        var srcName = image[getNextImage()];
+
+        $("#banner").fadeOut(500, function() {
+          $("#banner").attr("src", srcName);
+          $("#banner").fadeIn(500);
+        });
+      });
+
+    </script>
+
     <script type="text/javascript">
 
     // Menu
