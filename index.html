@@ -14,8 +14,8 @@
     <!-- JQuery -->
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-    <!-- Freewall plugin -->
-    <script type="text/javascript" src="freewall.js"></script>
+    <!--Jaliswall plugin-->
+    <script src="jaliswall.js"></script>
 
     <!-- Bootstrap -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -82,15 +82,36 @@
       </nav>
   </div>
 
-
-  <div id="free-wall">
-    <div class="item size22"><img src="img2.jpg"></div>
-    <div class="item"><img src="img3.jpg"></div>
-    <div class="item"><img src="img4.jpg"></div>
-    <div class="item"><img src="img8.jpg"></div>
-    <div class="item"><img src="img10.jpg"></div>
-    <div class="item"><img src="img7.jpg"></div>
+<div class="wall"> 
+  <div class="wall-item"> 
+  <img src="img2.jpg"/>
+  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
   </div>
+  <div class="wall-item"> <img src="img3.jpg" />
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  </div>
+  <div class="wall-item"> <img src="img4.jpg" />
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  </div>
+  <div class="wall-item"> <img src="img5.jpg" />
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  </div>
+  <div class="wall-item"> <img src="img6.jpg" />
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  </div>
+  <div class="wall-item"> <img src="img7.jpg" />
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  </div>
+  <div class="wall-item"> <img src="img8.jpg" />
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  </div>
+  <div class="wall-item"> <img src="img9.jpg" />
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  </div>
+  <div class="wall-item"> <img src="img10.jpg" />
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  </div>
+</div>
     
     <script type="text/javascript">
 
@@ -122,35 +143,9 @@
 
     </script>
 
-    <script type="text/javascript">
-
-    // Menu
-      var $menuButton = $('#menu-button'),
-          $slideMenu = $('#slide-down-menu');
-
-      $menuButton.click(function(){
-        $slideMenu.slideToggle();
-        return false;
-      });
-
-      // Freewall
-      $(function() {
-        var wall = new freewall("#free-wall");
-        wall.fitWidth();
-        wall.reset({
-          selector: '.item',
-          animate: false,
-          gutterX: 10,
-          gutterY: 10,
-          draggable: false,
-          cellW: '200px',
-          cellH: 'auto',
-          onResize: function() {
-            this.fitWidth();
-          }
-        });
-      })
-
+    <script>
+      //jaliswall plugin
+      $('.wall').jaliswall({item:'.wall-item'});
     </script>
 
   </body>
