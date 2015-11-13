@@ -85,32 +85,40 @@
 <div class="wall"> 
   <div class="wall-item"> 
   <img src="img2.jpg"/>
-  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+  <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img2</h2>
   </div>
   <div class="wall-item"> <img src="img3.jpg" />
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img3</h2>
   </div>
   <div class="wall-item"> <img src="img4.jpg" />
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img4</h2>
   </div>
   <div class="wall-item"> <img src="img5.jpg" />
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img5</h2>
   </div>
   <div class="wall-item"> <img src="img6.jpg" />
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img6</h2>
   </div>
   <div class="wall-item"> <img src="img7.jpg" />
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img7</h2>
   </div>
   <div class="wall-item"> <img src="img8.jpg" />
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img8</h2>
   </div>
   <div class="wall-item"> <img src="img9.jpg" />
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img9</h2>
   </div>
   <div class="wall-item"> <img src="img10.jpg" />
-    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.img10</h2>
   </div>
+</div>
+
+<!--POP-UP IMAGE -->
+
+<div id="overlay"></div>
+<div id="overlayContent">
+    <img id="imgBig" src="" alt="" width="60%"/>
+    <div><h2></h2></div>
 </div>
     
     <script type="text/javascript">
@@ -143,9 +151,30 @@
 
     </script>
 
-    <script>
+    <script type="text/javascript">
       //jaliswall plugin
       $('.wall').jaliswall({item:'.wall-item'});
+    </script>
+
+    <script type="text/javascript">
+      //pop-up image
+      $(".wall-item img").click(function() {
+        var source = $(this).attr('src');
+        var imgText = $(this).next().html();
+        console.log(imgText);
+        $("#overlayContent h2").html(imgText);
+
+        $("#imgBig").attr('src', source);
+        $("#overlay").fadeIn(500);
+        $("#overlayContent").fadeIn(500);
+      });
+
+      $("#imgBig").click(function(){
+        $("#overlay").fadeOut(500);
+        $("#overlayContent").fadeOut(500);
+      });
+     
+
     </script>
 
   </body>
