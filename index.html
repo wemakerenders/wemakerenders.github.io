@@ -159,6 +159,8 @@
     <script type="text/javascript">
      //pop-up image
 
+     var state = "bigImageClosed";
+
       function adjustFormat() {
         //compare height and width to decide wether width or height will take 100% of the screen
 
@@ -190,6 +192,8 @@
         }
       }
 
+
+
       $("#imgBig").load(function() {
         adjustFormat();
       });
@@ -201,26 +205,31 @@
 
         function fadeIn() {
           $("#overlay").fadeIn(500);
-        $("#overlayContent").fadeIn(500);
-        }
+          $("#overlayContent").fadeIn(500, function() {
+            state = "bigImageOpened";
+          });
+        };
 
         function setOverlayContent() {
           $("#overlayContent h2").html(imgText);
           $("#imgBig").attr('src', source);
-        }
+        };
 
         
         setOverlayContent();
         adjustFormat();
         fadeIn();
+        
       });
 
-
-      $("#imgBig").click(function(){
-        $("#overlay").fadeOut(500);
-        $("#overlayContent").fadeOut(500);
+      $(window).click(function() {
+        if (state == "bigImageOpened") {
+          $("#overlay").fadeOut(500);
+          $("#overlayContent").fadeOut(500, function() {
+            state = "bigImageClosed"
+          });
+        }
       });
-     
 
     </script>
 
